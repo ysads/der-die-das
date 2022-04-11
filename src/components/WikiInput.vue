@@ -1,6 +1,13 @@
 <template>
   <div class="input-wrapper">
-    <input v-model="value" class="input" type="text" @input="debounceEmit" />
+    <h1 class="title">Der • Die • Das</h1>
+    <input
+      v-model="value"
+      class="input"
+      type="text"
+      placeholder="Schreibe ein Wort"
+      @input="debounceEmit"
+    />
   </div>
 </template>
 
@@ -32,6 +39,11 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
+.title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #509170;
+}
 .input {
   color: #211f1f;
   background: #8bc5a8;
